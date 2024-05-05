@@ -1,6 +1,6 @@
 import pytest
 from selenium import webdriver
-from locators import LocatorsPage
+from locators import TestLocators
 
 
 @pytest.fixture(scope='function')
@@ -9,8 +9,3 @@ def driver():
 
     yield driver
     driver.quit()
-
-@pytest.fixture(scope='function')
-def page():
-    page = LocatorsPage()
-    return page

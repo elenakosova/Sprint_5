@@ -1,124 +1,75 @@
 from selenium.webdriver.common.by import By
 
-class LocatorsPage:
+class TestLocators:
 
+    # Кнопка «Личный кабинет» на главной странице
+    button_personal_account = By.XPATH, "//p[text()='Личный Кабинет']"
 
-    @property
-    def button_personal_account(self):
-        # Кнопка «Личный кабинет» на главной странице
-        return By.XPATH, "//p[text()='Личный Кабинет']"
+    # Кнопка «Войти в аккаунт» на главной странице
+    button_log_in_account = By.XPATH, "//button[text()='Войти в аккаунт']"
 
-    @property
-    def button_log_in_account(self):
-        # Кнопка «Войти в аккаунт» на главной странице
-        return By.XPATH, "//button[text()='Войти в аккаунт']"
+    # Инпут Email на страницах Входа и регистрации
+    input_email = By.XPATH, "//label[text()='Email']/../input"
 
-    @property
-    def input_email(self):
-        # Инпут Email на страницах Входа и регистрации
-        return By.XPATH, "//label[text()='Email']/../input"
+    # Инпут Пароль на страницах Входа и регистрации
+    input_password = By.XPATH, "//label[text()='Пароль']/../input"
 
-    @property
-    def input_password(self):
-        # Инпут Пароль на страницах Входа и регистрации
-        return By.XPATH, "//label[text()='Пароль']/../input"
+    # Инпут Логин в личном кабинете
+    input_login_personal_account = By.XPATH, "//label[text()='Логин']/../input"
 
-    @property
-    def input_login_personal_account(self):
-        # Инпут Логин в личном кабинете
-        return By.XPATH, "//label[text()='Логин']/../input"
+    # Инпут Логин на странице Входа
+    input_name = By.XPATH, "//label[text()='Имя']/../input"
 
-    @property
-    def input_name(self):
-        # Инпут Логин на странице Входа
-        return By.XPATH, "//label[text()='Имя']/../input"
+    # Кнопка «Войти» на странице Входа
+    button_log_in = By.XPATH, "//button[text()='Войти']"
 
-    @property
-    def button_log_in(self):
-        # Кнопка «Войти» на странице Входа
-        return By.XPATH, "//button[text()='Войти']"
+    # Кнопка «Зарегистрироваться» на странице регистрации
+    button_register = By.XPATH, "//button[text()='Зарегистрироваться']"
 
-    @property
-    def button_register(self):
-        # Кнопка «Зарегистрироваться» на странице регистрации
-        return By.XPATH, "//button[text()='Зарегистрироваться']"
+    # Нотификция «Некорректный пароль» под инпутом на странице Входа
+    error_field_password = By.XPATH, "//form//fieldset[3]//p[text()='Некорректный пароль']"
 
-    @property
-    def error_field_password(self):
-        # Нотификция «Некорректный пароль» под инпутом на странице Входа
-        return By.XPATH, "//form//fieldset[3]//p[text()='Некорректный пароль']"
+    # Кнопка «Оформитье заказ» на главной странице
+    button_set_an_order = By.XPATH, "//button[text()='Оформить заказ']"
 
-    @property
-    def button_set_an_order(self):
-        # Кнопка «Оформитье заказ» на главной странице
-        return By.XPATH, "//button[text()='Оформить заказ']"
+    # Пункт меню «Выход» в личном кабинете
+    menu_item_log_in = By.XPATH, "//button[text()='Выход']"
 
-    @property
-    def menu_item_log_in(self):
-        # Пункт меню «Выход» в личном кабинете
-        return By.XPATH, "//button[text()='Выход']"
+    # Ccылка «Войти» на странице регистрации  и восстановления пароля
+    link_log_in = By.XPATH, "//a[text()='Войти']"
 
-    @property
-    def link_log_in(self):
-        # Ccылка «Войти» на странице регистрации  и восстановления пароля
-        return By.XPATH, "//a[text()='Войти']"
+    # Заголовок «Вход» на странице авторизации
+    header_log_in_page = By.XPATH, "//h2[text()='Вход']"
 
-    @property
-    def header_log_in_page(self):
-        # Заголовок «Вход» на странице авторизации
-        return By.XPATH, "//h2[text()='Вход']"
+    # Пункт меню «Профиль» в личном кабинете
+    menu_item_profile = By.XPATH, "//a[text()='Профиль']"
 
-    @property
-    def menu_item_profile(self):
-        # Пункт меню «Профиль» в личном кабинете
-        return By.XPATH, "//a[text()='Профиль']"
+    # Пункт меню «Конструтор» в шапке сайта
+    main_header_constructor = By.XPATH, "//p[text()='Конструктор']"
 
-    @property
-    def main_header_constructor(self):
-        # Пункт меню «Конструтор» в шапке сайта
-        return By.XPATH, "//p[text()='Конструктор']"
+    # Заголовок раздела «Конструтор»
+    header_constructor = By.XPATH, "//h1[text()='Соберите бургер']"
 
-    @property
-    def header_constructor(self):
-        # Заголовок раздела «Конструтор»
-        return By.XPATH, "//h1[text()='Соберите бургер']"
+    # Логотип сайта
+    logo_main_page = By.CLASS_NAME, "AppHeader_header__logo__2D0X2"
 
-    @property
-    def logo_main_page(self):
-        # Логотип сайта
-        return By.CLASS_NAME, "AppHeader_header__logo__2D0X2"
+    # Раздел «Соусы» в Конструкторе
+    sauce_constructor = By.XPATH, "//span[text()='Соусы']"
 
-    @property
-    def sauce_constructor(self):
-        # Раздел «Соусы» в Конструкторе
-        return By.XPATH, "//span[text()='Соусы']"
+    # Заголовок раздела «Соусы» в Конструкторе
+    header_sauce_constructor = By.XPATH, "//h2[text()='Соусы']"
 
-    @property
-    def header_sauce_constructor(self):
-        # Заголовок раздела «Соусы» в Конструкторе
-        return By.XPATH, "//h2[text()='Соусы']"
+    # Раздел «Начинки» в Конструкторе
+    filling_constructor = By.XPATH, "//span[text()='Начинки']"
 
-    @property
-    def filling_constructor(self):
-        # Раздел «Начинки» в Конструкторе
-        return By.XPATH, "//span[text()='Начинки']"
+    # Заголовок раздела «Начинки» в Конструкторе
+    header_filling_constructor = By.XPATH, "//h2[text()='Начинки']"
 
-    @property
-    def header_filling_constructor(self):
-        # Заголовок раздела «Начинки» в Конструкторе
-        return By.XPATH, "//h2[text()='Начинки']"
+    # Раздел «Булки» в Конструкторе
+    bread_constructor = By.XPATH, "//span[text()='Булки']"
 
-    @property
-    def bread_constructor(self):
-        # Раздел «Булки» в Конструкторе
-        return By.XPATH, "//span[text()='Булки']"
+    # Заголовок раздела «Булки» в Конструкторе
+    header_bread_constructor = By.XPATH, "//h2[text()='Булки']"
 
-    @property
-    def header_bread_constructor(self):
-        # Заголовок раздела «Булки» в Конструкторе
-        return By.XPATH, "//h2[text()='Булки']"
-
-    @property
-    def select_tab_constructor(self):
-        # Выбранный таб в конструкторе
-        return By.XPATH, ".//div[contains(@class, 'current')]/span"
+    # Выбранный таб в конструкторе
+    select_tab_constructor = By.XPATH, ".//div[contains(@class, 'current')]/span"
